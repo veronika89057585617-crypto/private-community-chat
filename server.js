@@ -722,7 +722,8 @@ function startServer(port) {
   server.listen(port, () => {
     const actualPort = server.address().port;
     console.log(`Private Community chat is running: http://localhost:${actualPort}`);
-    console.log(`Admin link: http://localhost:${actualPort}/admin/${ADMIN_SECRET}`);
+    const publicUrl = process.env.RENDER_EXTERNAL_URL || process.env.PUBLIC_URL || `http://localhost:${actualPort}`;
+    console.log(`Admin link: ${publicUrl}/admin/${ADMIN_SECRET}`);
     console.log('Keep this admin link private. Change with ADMIN_SECRET=...');
   });
 }
