@@ -1,0 +1,1 @@
+cd "$HOME/Downloads/ANON_CHAT_MAC_SAFE_START_v3" && bash START_MAC.command

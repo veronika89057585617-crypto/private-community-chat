@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: private-community-chat
+    runtime: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: DATA_DIR
+        value: /var/data
+    disk:
+      name: private-community-data
+      mountPath: /var/data
+      sizeGB: 1

@@ -1,0 +1,14 @@
+{
+  "name": "private-community-anonymous-chat",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Private Community anonymous chat with admin panel, invite links and server-side contact blocking.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {}
+}
